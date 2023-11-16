@@ -5,13 +5,13 @@ import {Pie} from 'react-chartjs-2';
 Chart.register(ArcElement,Tooltip,Legend);
 
 
-const PieChart = ({vaccinationByGenderDetails}) => {
-    console.log(vaccinationByGenderDetails[0])
+const PieChart = ({data}) => {
+   
     var data = {
-        labels: vaccinationByGenderDetails?.map(x => x.gender),
+        labels: data?.map(x => x.vaccineDate),
         datasets: [{
-          label: vaccinationByGenderDetails?.length ,
-          data: vaccinationByGenderDetails?.map(x => x.count),
+          label: data?.length ,
+          data: data?.map(x => x.dose1),
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',

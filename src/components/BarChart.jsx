@@ -4,13 +4,13 @@ import {Bar} from 'react-chartjs-2'
 
 Chart.register(BarElement,CategoryScale,LinearScale)
 
-const BarChart = ({vaccineCoverage}) => {
-      
+const BarChart = ({data}) => {
+      console.log(data)
   var data = {
-    labels: vaccineCoverage?.map(x => x.vaccineDate),
+    labels: data?.map(x => x.vaccineDate),
     datasets: [{
       label: `Vaccine Coverage In Last 7 days`,
-      data: vaccineCoverage?.map(x => x?.dose1),
+      data: data?.map(x => x?.dose1),
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',

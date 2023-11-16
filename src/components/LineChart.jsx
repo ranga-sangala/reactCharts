@@ -3,13 +3,13 @@ import {Chart, LineElement, CategoryScale, PointElement,LinearScale} from 'chart
 import {Line} from 'react-chartjs-2'
 Chart.register(LineElement,PointElement,CategoryScale,LinearScale)
 
-const LineChart = ({vaccineCoverage}) => {
+const LineChart = ({data}) => {
       
     var data = {
-      labels: vaccineCoverage?.map(x => x.vaccineDate),
+      labels: data?.map(x => x.vaccineDate),
       datasets: [{
         label: `Vaccine Coverage in last 7 Days`,
-        data: vaccineCoverage?.map(x => x?.dose1),
+        data: data?.map(x => x?.dose1),
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
