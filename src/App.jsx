@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Chart from './components/Chart';
+import DynamicChart from './components/Chart';
+import './App.css'
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
   };
    
   return (
-    <>
+    <div className='app-container'>
       <div>
         <label>Select Chart Type:</label>
         <select onChange={(e) => handleChartTypeChange(e.target.value)} value={chartType}>
@@ -50,10 +51,10 @@ function App() {
           <option value="pie">Pie Chart</option>
         </select>
       </div>
-      <div>
-        <Chart chartType={chartType} data={vaccineData} />
+      <div className='chart-container'>
+        <DynamicChart chartType={chartType} vaccineData={vaccineData} />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -5,10 +5,22 @@
   text-align: center;
 }
 
-
-
-
-
+.app-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+.chart-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:500px;
+  width:600px;
+  margin-top: 30px;
+}
 .card {
   padding: 2em;
 }
